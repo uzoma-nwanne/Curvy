@@ -1,14 +1,17 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=Curvy , initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Curvy , initial-scale=1.0" />
     <title>Curvy HTML</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-              h1 {
+      h1 {
         font-size: 4rem;
       }
       p {
@@ -16,7 +19,7 @@
       }
       body {
         margin: 0;
-        font-family: 'Prompt', sans-serif;
+        font-family: "Prompt", sans-serif;
         color: white;
         background: #202731;
         overflow-x: hidden;
@@ -59,7 +62,7 @@
       }
 
       .curve::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         border-radius: 100% 50%;
@@ -70,7 +73,7 @@
       }
 
       .curve::after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         border-radius: 100% 50%;
@@ -80,42 +83,134 @@
         transform: translate(-4%, 40%);
         z-index: -1;
       }
+
+      /* Bubble bg with plain CSS */
+
+      .bubble::after {
+        content: "";
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: #0f0f10;
+        height: 85%;
+      }
+
+      /*SVg style for wave from shapedivider.app */
+      .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 249px;
+}
+
+.wave .shape-fill {
+  fill: hsl(240, 3%, 6%);
+}
+ /* SVG background image via https://haikei.app/ */
+
+ .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .layer1 {
+        background-image: url('./layer1.svg');
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <section class="blue">
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
+      <div class="curve"></div>
+    </section>
+    <section>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
+    </section>
+    <section class="bubble">
+      <h1>Nice Curves!</h1>
+      <p>
+        A website is like a road. The more curves it has the more interesting it
+        is.
+      </p>
+    </section>
     <section class="red">
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-        <div class="curve"></div>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
+      <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    </section>
+    <div class="spacer layer1"></div>
+    <section>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
+    </section>
+    <div class="spacer layer2 flip"></div>
+    <section class="pink">
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
     </section>
     <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
     </section>
     <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        aspernatur repellendus recusandae vel consequatur tempore cupiditate
+        aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga
+        doloremque eos iste ad incidunt eveniet.
+      </p>
     </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-    </section>
-    <section>
-        <h1>Nice Curves</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur repellendus recusandae vel consequatur tempore cupiditate aperiam minima ducimus. Sapiente ipsam laboriosam nesciunt fuga doloremque eos iste ad incidunt eveniet.</p>
-    </section>
-   
-</body>
+  </body>
 </html>
